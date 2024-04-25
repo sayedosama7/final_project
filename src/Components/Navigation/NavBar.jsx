@@ -28,8 +28,15 @@ const Navbar = () => {
                         <button class="dropbtn">Courses&events<IoIosArrowDown size={18} className='mt-1 IoIosArrowDown' />
                         </button>
                         <div class="dropdown-content">
-                            <Link to="/courses">courses page</Link>
-                            <Link to="/events">events</Link>
+                            <Link to="/courses">all courses</Link>
+                            <Link to="/coursesDetails">web development</Link>
+                            <Link to="/coursesDetails">mobile development</Link>
+                            <Link to="/coursesDetails">graphics</Link>
+                            <Link to="/coursesDetails">IT & Software</Link>
+                            <Link to="/coursesDetails">Data Science</Link>
+                            <Link to="/coursesDetails">Artificial Intelligence</Link>
+                            <Link to="/coursesDetails">Photoshop Course</Link>
+                            <Link to="/coursesDetails">Illustrator Course</Link>
                         </div>
                     </li>
 
