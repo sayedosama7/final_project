@@ -24,8 +24,10 @@ const Navbar = () => {
                     <li>
                         <Link to="/">Home</Link>
                     </li>
+
+                    {/* start dropdown menu  */}
                     <li class="dropdown fw-bold">
-                        <button class="dropbtn">Courses&events<IoIosArrowDown size={18} className='mt-1 IoIosArrowDown' />
+                        <button class="dropbtn">Courses<IoIosArrowDown size={18} className='mt-1 IoIosArrowDown' />
                         </button>
                         <div class="dropdown-content">
                             <Link to="/courses">all courses</Link>
@@ -41,9 +43,7 @@ const Navbar = () => {
                     </li>
 
                     <li className='mr-3'>
-                        <div>
-                            <Link to="/instructors" className='mr-0'>instructors</Link>
-                        </div>
+                        <Link to="/instructors" className='mr-0'>instructors</Link>
                     </li>
 
                     <li>
@@ -52,16 +52,20 @@ const Navbar = () => {
                     <li>
                         <Link to="/about">about us</Link>
                     </li>
-
-
                     {/* User Registration */}
-                    <div className="user-options">
+                    <div className="user-options uo-hidden">
                         <Link to='/signup' className="signup px-3 py-1 mr-2 mb-2">Sign Up</Link>
                         <Link to='/login' className="signup px-3 py-1 mb-2">Log In</Link>
                         {/* <Link to='/profile'><FaRegUser size={28} className="mr-3 mb-2 fauser" /></Link> */}
                     </div>
-                </div>
 
+                </div>
+                {/* User Registration */}
+                <div className="user-options uo-show">
+                    <Link to='/signup' className="signup px-3 py-1 mr-2 mb-2">Sign Up</Link>
+                    <Link to='/login' className="signup px-3 py-1 mb-2">Log In</Link>
+                    {/* <Link to='/profile'><FaRegUser size={28} className="mr-3 mb-2 fauser" /></Link> */}
+                </div>
                 {/* Mobile Menu Overlay */}
                 {isOpen && <div className="overlay" onClick={toggleNavbar} />}
 

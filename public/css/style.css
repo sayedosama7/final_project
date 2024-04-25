@@ -188,10 +188,22 @@ li {
     display: block;
 }
 
+.uo-hidden {
+    display: none;
+}
+
 @media (max-width: 992px) {
     .user-options {
         flex-direction: column;
         align-items: start;
+    }
+
+    .uo-hidden {
+        display: flex;
+    }
+
+    .uo-show {
+        display: none;
     }
 
     .navbar-links a,
@@ -631,78 +643,92 @@ hr {
 /* End footer */
 
 
-/* ************************************************************************ */
-/* ************************************************************************ */
-/* ************************************************************************ */
-/* ***************************** HOME PAGE  ******************************* */
-/* ************************************************************************ */
-/* ************************************************************************ */
-/* ************************************************************************ */
+/* start headhome  */
 
-.allhomepage {
-    background-color: rgb(252, 251, 251);
-}
-
-/* ************************************************************************ */
-/********************************* headhome *******************************/
-/* ************************************************************************ */
 .headhome {
     background-image: url("../images/Home/SL-120722-54440-04.jpg");
     background-size: cover;
 }
 
-.headhome .text {
-    margin-top: 100px;
+.headhome-title {
+    padding-top: 10%;
 }
 
-@keyframes movedownup {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(40px);
-    }
-
-    100% {
-        transform: translateY(0px);
-    }
+.headhome .headhome-caption {
+    padding-top: 20%;
 }
 
-.headhome .text .imgone {
-    width: 70px;
-    height: 70px;
+.headhome-title {
+    position: relative;
+}
+
+.headhome .headhome-caption .rocket {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 180px;
+    right: 80px;
+}
+
+.headhome-caption h2 {
+    font-size: 80px;
+}
+
+.headhome-caption h3 {
+    font-size: 80px;
+}
+
+.headhome-caption h4 {
+    font-size: 40px;
+    font-family: "Courgette", cursive !important
+}
+
+.headhome .headhome-caption .tag {
     margin-left: 20px;
     animation: movedownup 2s infinite;
 }
 
-.headhome .text h1 {
-    font-size: 50px;
-    font-weight: 500;
-    margin-top: 30px;
+.headhome .spin-logo {
+    display: block;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    animation: rotateimg360 5s linear infinite;
 }
 
-.headhome .text h1 span {
-    font-weight: 700;
-    font-family: "Dancing Script", cursive;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
+.headhome .head-banner {
+    position: relative;
 }
 
-.headhome .text h1 span img {
-    width: 80px;
-    height: 80px;
+.headhome .small-img {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 100px;
+    right: 300px;
 }
 
-.headhome .text h4 {
-    margin-top: 20px;
+.headhome .light {
+    right: 100px;
+    top: 10px;
 }
 
-.buttons {
-    margin-top: 50px;
+.headhome .camera {
+    right: 0px;
+    top: 150px;
 }
 
+.headhome .mic {
+    left: 50px;
+    top: 200px;
+}
+
+.headhome .lamp {
+    left: 100px;
+    top: 70px;
+}
+
+/* start button  */
 .buttons .blob-btn {
     z-index: 1;
     position: relative;
@@ -804,15 +830,21 @@ hr {
     transform: translateZ(0) scale(1.7);
 }
 
-.headhome .text img {
-    width: 300px;
-    height: 300px;
-    margin-left: 300px;
-    margin-top: -100px;
-}
+/* End button  */
 
-.headhome .image .icons {
-    display: flex;
+/* start key frames  */
+@keyframes movedownup {
+    0% {
+        transform: translateY(-20px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(-20px);
+    }
 }
 
 @keyframes rotateimg360 {
@@ -825,28 +857,41 @@ hr {
     }
 }
 
-.headhome .image .imgone {
-    width: 200px;
-    height: 200px;
-    margin-left: 100px;
-    animation: rotateimg360 5s linear infinite;
+/* End key frames  */
+@media (max-width:992px) {
+
+    .headhome-caption .rocket,
+    .headhome .spin-logo,
+    .headhome .head-banner div ,.tag{
+        display: none;
+    }
+
+}
+@media (max-width:576px) {
+    .headhome-title {
+        padding: 20px;
+    }
+    .headhome .headhome-caption {
+        padding-top: 0;
+    }
+    .headhome-caption h2 {
+        font-size: 60px;
+    }
+    
+    .headhome-caption h3 {
+        font-size: 60px;
+    }
+    
+    .headhome-caption h4 {
+        font-size: 40px;
+        font-family: "Courgette", cursive !important
+    }
+    .buttons {
+        padding: 0 20px;
+    }
 }
 
-.headhome .image .imgtwo {
-    width: 70px;
-    height: 70px;
-    margin-top: 130px;
-    margin-left: 130px;
-    /* animation: rotate90 2s linear infinite;  */
-}
-
-.headhome .image .imgthree {
-    width: 370px;
-    height: 570px;
-    margin-left: 200px;
-    margin-top: 0px;
-}
-
+/* End headhome  */
 
 /* ************************************************************************ */
 /********************************* bodyhome *******************************/
@@ -1261,41 +1306,6 @@ hr {
 
 @media (max-width:992px) {
 
-    /**************** headhome **********************/
-    .headhome .text h1 span img {
-        margin-left: 400px;
-    }
-
-    .buttons {
-        margin-top: 30px;
-    }
-
-    .headhome .text img {
-        margin-left: 200px;
-        margin-top: -180px;
-    }
-
-    .headhome .image .icons {
-        display: flex;
-    }
-
-    .headhome .image .imgtwo {
-        width: 70px;
-        height: 70px;
-        margin-top: 130px;
-        margin-left: 80px;
-
-    }
-
-    .headhome .image .imgthree {
-        width: 370px;
-        height: 570px;
-        margin-left: 100px;
-        margin-top: 0px;
-    }
-
-
-
     /**************** sectionhome **********************/
     .sectionhome .rowone .buttons {
         margin-left: 350px;
@@ -1366,32 +1376,6 @@ hr {
 /* ************************************* */
 
 @media (max-width:768px) {
-    /**************** headhome **********************/
-    .headhome .text h1 span img {
-        margin-left: 50px;
-    }
-
-    .headhome .text img {
-        margin-left: 80px;
-        margin-top: -170px;
-    }
-
-    .headhome .image .imgone {
-        margin-left: -30px;
-    }
-
-    .headhome .image .imgtwo {
-        width: 70px;
-        height: 70px;
-        margin-top: 130px;
-        margin-left: 100px;
-    }
-
-    .headhome .image .imgthree {
-        margin-left: 0px;
-    }
-
-
     /**************** bodyhome **********************/
     .bodyhome #box {
         display: flex;
@@ -1484,42 +1468,6 @@ hr {
 /**************** headhome **********************/
 
 @media (max-width:576px) {
-
-    .headhome .text {
-        margin-top: 100px;
-    }
-
-    .headhome .text h1 span img {
-        width: 80px;
-        height: 80px;
-        margin-top: 5px;
-    }
-
-    .headhome .text img {
-        width: 300px;
-        height: 300px;
-        margin-left: 250px;
-        margin-top: -100px;
-
-    }
-
-    .headhome .image .imgone {
-        margin-left: 30px;
-        margin-top: -80px;
-    }
-
-    .headhome .image .imgtwo {
-        width: 70px;
-        height: 70px;
-        margin-top: 130px;
-        margin-left: 130px;
-    }
-
-    .headhome .image .imgthree {
-        margin-left: 100px;
-    }
-
-
     /**************** sectionhome **********************/
 
     .sectionhome .rowone .buttons {
