@@ -1,83 +1,84 @@
 import Navbar from '../Navigation/NavBar';
 import Footer from '../Navigation/Footer';
+import ScrollToTop from 'react-scroll-to-top';
 
-const OurInstructors = () => {
+const Instructors = () => {
   const instrutors = [
     {
-      "name": "name",
+      "name": "ahmed khaled",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum repellendus",
-      "job_title": "job title",
-      "img_url": "/images/instructors/instructors.jpeg",
+      "job_title": "backend developer",
+      "img": "/images/instructors/instructors-1.webp",
       "facebook": "https://www.facebook.com/",
       "twitter": "https://www.twitter.com/",
       "linkedin": "https://www.linkedin.com/",
       "instagram": "https://www.instagram.com/"
     },
     {
-      "name": "name",
+      "name": "taha mohamed",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum repellendus",
-      "job_title": "job title",
-      "img_url": "/images/instructors/instructors.jpeg",
+      "job_title": "full stack developer",
+      "img": "/images/instructors/instructors-2.jpeg",
       "facebook": "https://www.facebook.com/",
       "twitter": "https://www.twitter.com/",
       "linkedin": "https://www.linkedin.com/",
       "instagram": "https://www.instagram.com/"
     },
     {
-      "name": "name",
+      "name": "abdelhamed ali",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum repellendus",
-      "job_title": "job title",
-      "img_url": "/images/instructors/instructors.jpeg",
+      "job_title": "full stack developer",
+      "img": "/images/instructors/instructors-3.webp",
       "facebook": "https://www.facebook.com/",
       "twitter": "https://www.twitter.com/",
       "linkedin": "https://www.linkedin.com/",
       "instagram": "https://www.instagram.com/"
     },
     {
-      "name": "name",
+      "name": "sayed osama",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum repellendus",
-      "job_title": "job title",
-      "img_url": "/images/instructors/instructors.jpeg",
+      "job_title": "mobile developer",
+      "img": "/images/instructors/instructors-4.webp",
       "facebook": "https://www.facebook.com/",
       "twitter": "https://www.twitter.com/",
       "linkedin": "https://www.linkedin.com/",
       "instagram": "https://www.instagram.com/"
     },
     {
-      "name": "name",
+      "name": "mohamed hani",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum repellendus",
-      "job_title": "job title",
-      "img_url": "/images/instructors/instructors.jpeg",
+      "job_title": "data science developer",
+      "img": "/images/instructors/instructors-5.jpeg",
       "facebook": "https://www.facebook.com/",
       "twitter": "https://www.twitter.com/",
       "linkedin": "https://www.linkedin.com/",
       "instagram": "https://www.instagram.com/"
     },
     {
-      "name": "name",
+      "name": "mahmoud allam",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum repellendus",
-      "job_title": "job title",
-      "img_url": "/images/instructors/instructors.jpeg",
+      "job_title": "games developer",
+      "img": "/images/instructors/instructors-6.jpeg",
       "facebook": "https://www.facebook.com/",
       "twitter": "https://www.twitter.com/",
       "linkedin": "https://www.linkedin.com/",
       "instagram": "https://www.instagram.com/"
     },
     {
-      "name": "name",
+      "name": "ahmed mahmoud",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum repellendus",
-      "job_title": "job title",
-      "img_url": "/images/instructors/instructors.jpeg",
+      "job_title": "full stack developer",
+      "img": "/images/instructors/instructors-7.jpeg",
       "facebook": "https://www.facebook.com/",
       "twitter": "https://www.twitter.com/",
       "linkedin": "https://www.linkedin.com/",
       "instagram": "https://www.instagram.com/"
     },
     {
-      "name": "name",
+      "name": "ibrahim hessien",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum repellendus",
-      "job_title": "job title",
-      "img_url": "/images/instructors/instructors.jpeg",
+      "job_title": "garpgic designer",
+      "img": "/images/instructors/instructors-8.webp",
       "facebook": "https://www.facebook.com/",
       "twitter": "https://www.twitter.com/",
       "linkedin": "https://www.linkedin.com/",
@@ -90,30 +91,33 @@ const OurInstructors = () => {
     <div>
       <Navbar />
       <div className="container my-5">
-        <div className='d-flex justify-content-between mb-5 instructor_title'>
-          <div className='m-auto position-relative'>
-            <img className='img-fluid tag' src="/images/instructors/tag-2.png" alt="" />
-            <h2 className='main-title text-primary mb-2 wow fadeInLeft' data-wow-delay=".3s">Our Instructors</h2>
-            <p className='text-muted fw-bold mb-5 wow fadeInUp' data-wow-delay=".4s" data-wow-duration="3s">
-              Our role here has increased more and this is so that we can benefit the students who are with us in our courses.
-            </p>
-          </div>
-          <img className='img-fluid wow fadeInDown' data-wow-delay=".3s" src="/images/instructors/instructors-banner.png" alt="" />
-        </div>
-
         <div className="row">
+
+          <div className='d-flex justify-content-between mb-5 title-all'>
+
+            <div className='m-auto position-relative'>
+              <img className='img-fluid tag' src="/images/instructors/tag-2.png" alt="" />
+              <h2 className='main-title text-primary mb-2 wow fadeInLeft' data-wow-delay=".3s">Our Instructors</h2>
+              <p className='text-muted fw-bold mb-5 wow fadeInUp' data-wow-delay=".4s" data-wow-duration="3s">
+                Our role here has increased more and this is so that we can benefit the students who are with us in our courses.
+              </p>
+            </div>
+
+            <img className='img-fluid wow fadeInDown' data-wow-delay=".3s" src="/images/instructors/instructors-banner.png" alt="" />
+          </div>
+
 
           {instrutors.map((instructor, index) => (
 
             <div key={index} className='col-md-12 col-lg-6 rounded mb-4 wow fadeInUp instructors-card' data-wow-delay=".3s">
               <div className="instrctors p-3">
                 <div className="col-md-12 instrctors-left d-flex">
-                  <div className='col-md-12 col-lg-4 m-auto'>
-                    <img className='img-fluid rounded-circle' src={instructor.img_url} alt="instructors" />
+                  <div className='col-md-12 col-lg-5 m-auto'>
+                    <img className='img-fluid rounded-circle' src={instructor.img} alt="instructors" />
                   </div>
 
-                  <div className='col-md-12 col-lg-8'>
-                    <div className='ml-2 instructors-caption'>
+                  <div className='col-md-12 col-lg-6'>
+                    <div className='instructors-caption'>
                       <h4 className='text-primary'>{instructor.name}</h4>
                       <p className='text-muted'>{instructor.description}</p>
                       <div className='d-flex justify-content-between align-items-center instrctors-right'>
@@ -134,9 +138,14 @@ const OurInstructors = () => {
           ))}
         </div>
       </div>
+      <ScrollToTop smooth
+        color='#fff'
+        style={{ backgroundColor: '#372B73' }}
+        className='animate__animated animate__flash animate__infinite	infinite animate__slower'
+      />
       <Footer />
     </div>
   );
 };
 
-export default OurInstructors;
+export default Instructors;

@@ -8,9 +8,9 @@ function Headhome() {
         <Row>
           <Col md="6" lg="6">
             <div className='text animate__animated animate__fadeInLeft'>
-              <img className='imgone' src="/images/instructors/tag-2.png"></img>            
+              <img className='imgone' src="/images/instructors/tag-2.png" alt='instructors'></img>            
 
-              <h1>Best Online Learning <span> Resources!</span><span><img src="/images/Home/rocket.png"></img></span></h1>
+              <h1>Best Online Learning <span> Resources!</span><span><img src="/images/Home/rocket.png" alt='rocket'></img></span></h1>
               <h4>ake Your Free Account & Get Discounts</h4>
               {/* <button>Enroll Now</button> */}
               <div class="buttons">
@@ -36,17 +36,17 @@ function Headhome() {
                     </filter>
                   </defs>
                 </svg>
-                <img src='images/Home/kian Logo-01.png'></img>
+                <img src='images/Home/kian Logo-01.png' alt='logo'></img>
               </div>
               </div>
           </Col>
           <Col md="6" lg="6">
             <div className='image'>
               <div className='icons animate__animated animate__fadeInDown'>
-                <img className='imgone' src="images/Home/Untitled-1.png"></img>
-                <img className='imgtwo' src='images/Home/2910890.png'></img>
+                <img className='imgone' src="images/Home/Untitled-1.png" alt='home'></img>
+                <img className='imgtwo' src='images/Home/2910890.png' alt='home'></img>
               </div>
-              <img className='imgthree animate__animated animate__fadeInRight' src='images/Home/purepng.com-female-studentstudenteducationalinstitutionstudentsuniversity-studentschoolfemale-student-1421526922477gbjew.png'></img>
+              <img className='imgthree animate__animated animate__fadeInRight' src='images/Home/purepng.com-female-studentstudenteducationalinstitutionstudentsuniversity-studentschoolfemale-student-1421526922477gbjew.png' alt='home'></img>
             </div>
           </Col>
         </Row>

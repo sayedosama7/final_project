@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import { Container,Row,Col } from 'reactstrap';
 
@@ -52,7 +53,7 @@ function Sectionhome() {
                             </div>
 
                             <div className='image' id='imgone'>
-                                <img src="images/Home/sectionhome/pc-clipart-desktop-icon-18.png"></img>
+                                <img src="images/Home/sectionhome/pc-clipart-desktop-icon-18.png" alt='home'></img>
                             </div>
                         </div>
                     </Col>
@@ -67,7 +68,7 @@ function Sectionhome() {
                             </div>
 
                             <div className='image' id='imgtwo'>
-                                <img src="images/Home/sectionhome/75322-things-of-euclidean-vector-internet-technology-icon.png"></img>
+                                <img src="images/Home/sectionhome/75322-things-of-euclidean-vector-internet-technology-icon.png" alt='home'></img>
                             </div>
                         </div>
                     </Col>
@@ -82,7 +83,7 @@ function Sectionhome() {
                             </div>
 
                             <div className='image' id='imgthree'>
-                                <img src="images/Home/sectionhome/app-development-icon-28.png"></img>
+                                <img src="images/Home/sectionhome/app-development-icon-28.png" alt='home'></img>
                             </div>
                         </div>
                     </Col>
@@ -97,7 +98,7 @@ function Sectionhome() {
                             </div>
 
                             <div className='image' id='imgfour'>
-                                <img src="images/Home/sectionhome/computer-chip-with-ai-letters-3d-artificial-intelligence-icon-png.png"></img>
+                                <img src="images/Home/sectionhome/computer-chip-with-ai-letters-3d-artificial-intelligence-icon-png.png" alt='home'></img>
                             </div>
                         </div>
                     </Col>
@@ -112,7 +113,7 @@ function Sectionhome() {
                             </div>
 
                             <div className='image' id='imgfive'>
-                                <img src="images/Home/sectionhome/developer-icon-26.png"></img>
+                                <img src="images/Home/sectionhome/developer-icon-26.png" alt='home'></img>
                             </div>
                         </div>
                     </Col>
@@ -127,7 +128,7 @@ function Sectionhome() {
                             </div>
 
                             <div className='image' id='imgsix'>
-                                <img src="images/Home/sectionhome/design-icon-png-0.png"></img>
+                                <img src="images/Home/sectionhome/design-icon-png-0.png" alt='home'></img>
                             </div>
                         </div>
                     </Col>

@@ -5,11 +5,11 @@ import React from 'react'
     <div className='containe'>
         <div className='swiper'>
       
-      <img class="slide" src="images/Home/Untitled-2-01.png" alt="Image 1" />
-      <img class="slide" src="images/Home/Untitled-2-01.png" alt="Image 2" />
-      <img class="slide" src="images/Home/Untitled-2-01.png" alt="Image 3" />
-      <img class="slide" src="images/Home/Untitled-2-01.png" alt="Image 4" />
-      <img class="slide" src="images/Home/Untitled-2-01.png" alt="Image 1" />
+      <img class="slide" src="images/Home/Untitled-2-01.png" alt="img-1" />
+      <img class="slide" src="images/Home/Untitled-2-01.png" alt="img-2" />
+      <img class="slide" src="images/Home/Untitled-2-01.png" alt="img-3" />
+      <img class="slide" src="images/Home/Untitled-2-01.png" alt="img-4" />
+      <img class="slide" src="images/Home/Untitled-2-01.png" alt="img-1" />
       
 
     </div>

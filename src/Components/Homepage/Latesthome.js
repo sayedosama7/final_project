@@ -8,7 +8,7 @@ function Latesthome() {
                 <Row>
                     <Col xl="6" md="12">
                         <div className='text'>
-                            <h1>Get a 30% Discount! <span><img src='/images/Home/mic-speaker.png'></img></span></h1>
+                            <h1>Get a 30% Discount! <span><img src='/images/Home/mic-speaker.png' alt='home'></img></span></h1>
                             <h3>Create Your Free Account Today!</h3>
                             <h6>Lorem ipsum dolor sit amet consectetur. Non convallis sed id aliquam tempus. Volutpat tortor tincidunt egestas sit risus donec.</h6>
                             
@@ -47,7 +47,7 @@ function Latesthome() {
                         <img
       className='image wow zoomIn' // تضمين الكلاسات الخاصة بك هنا
       src="/images/Home/discount-stamp-2.png"
-      alt="Discount Stamp" // يفضل تضمين نص بديل للصورة لأغراض الوصولية
+      alt="Discount-Stamp" // يفضل تضمين نص بديل للصورة لأغراض الوصولية
       data-wow-duration="1s"
       data-wow-offset="100"
       style={{

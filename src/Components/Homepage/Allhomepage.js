@@ -6,7 +6,6 @@ import Mainhome from './Mainhome'
 import Latesthome from './Latesthome'
 import Finalhome from './Finalhome'
 // import Swiper from 'swiper'
-import Containe from './Containe'
 import ScrollToTop from 'react-scroll-to-top';
 import Footer from '../Navigation/Footer';
 import Endhome from './Endhome'
