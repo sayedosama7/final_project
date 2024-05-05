@@ -10,12 +10,12 @@ const Footer = () => {
         <section>
           <div class="container text-center text-md-start mt-5">
             <div class="row mt-3">
-              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto">
-                <h6 class="text-uppercase fw-bold mb-4">
+              <div class="logo-section col-md-12 col-lg-12 col-xl-12 mb-4">
+                <h6 class="text-uppercase text-light fw-bold mb-4">
                   <img className='footer-logo' src="/images/logo.jpeg" alt="logo" />
                   kian academy
                 </h6>
-                <p>
+                <p className='w-50'>
                   Is Your Guide To Learning
                   Our Role Here Has Increased More And This Is So
                   That We Can Benefit The Students Who Are With
@@ -23,8 +23,8 @@ const Footer = () => {
                 </p>
               </div>
 
-              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-3">
-                <h6 class="text-uppercase fw-bold">
+              <div class="col-md-12 col-lg-4 col-xl-4 mx-auto mb-3">
+                <h6 class="text-uppercase text-light fw-bold">
                   Quick Links
                 </h6>
                 <p className='mb-0'>
@@ -36,15 +36,6 @@ const Footer = () => {
                 <p className='mb-0'>
                   <Link to="/events" class="text-reset">Upcoming Events</Link>
                 </p>
-              </div>
-
-              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-3">
-                <h6 class="text-uppercase fw-bold">
-                  Explore
-                </h6>
-                <p className='mb-0'>
-                  <Link to="/about" class="text-reset">About Us</Link>
-                </p>
                 <p className='mb-0'>
                   <Link to="/gallry" class="text-reset">Gallery</Link>
                 </p>
@@ -53,8 +44,10 @@ const Footer = () => {
                 </p>
               </div>
 
-              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-3">
-                <h6 class="text-uppercase fw-bold">
+
+
+              <div class="col-md-12 col-lg-4 col-xl-4 mx-auto mb-3">
+                <h6 class="text-uppercase text-light fw-bold">
                   Information
                 </h6>
                 <p className='mb-0'>
@@ -66,10 +59,13 @@ const Footer = () => {
                 <p className='mb-0'>
                   <Link to="/contact" class="text-reset">Contact Us</Link>
                 </p>
+                <p className='mb-0'>
+                  <Link to="/about" class="text-reset">About Us</Link>
+                </p>
               </div>
 
-              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                <h6 class="text-uppercase fw-bold">Contact us</h6>
+              <div class="col-md-12 col-lg-4 col-xl-4 mx-auto mb-md-0 mb-4">
+                <h6 class="text-uppercase fw-bold text-light">Contact us</h6>
                 <p className='mb-2'><i class="fas fa-location-dot me-2"></i>Zagazig - Agriculture Square - Abu Ahmed Supermarket Street - Choumna Building, ground floor.</p>
                 <p className='mb-2'>
                   <i class="fas fa-envelope me-2"></i>

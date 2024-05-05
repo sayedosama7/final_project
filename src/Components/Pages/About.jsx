@@ -13,7 +13,7 @@ const About = () => {
             <Navbar />
             <div className="container about">
                 <div className="row">
-                    <div className="col-md-6 about-title">
+                    <div className="col-md-6 about-title wow fadeInDown">
                         <h2 className='mt-5 text-primary main-title'>about us</h2>
                         <h2 className='fw-bold text-dark mt-4'>
                             <span className='text-primary'>kian </span>
@@ -22,16 +22,16 @@ const About = () => {
                         <p className='text-muted fw-bold'>Our role here has increased more and this is so <br />that we can benefit the students who are with <br /> us in our courses.</p>
                     </div>
 
-                    <div className="col-md-6 about-banner">
+                    <div className="col-md-6 about-banner  wow fadeInUp">
                         <img className='img-fluid' src="/images/about/about.jpg" alt="about" />
                     </div>
 
-                    <div className="col-md-6 about-banner about-banner2 position-relative">
+                    <div className="col-md-6 about-banner about-banner2 position-relative wow fadeInDown">
                         <img className='img-fluid' src="/images/about/about-2.jpg" alt="about-2" />
                         <img className='img-fluid position-absolute kian-logo' src="/images/logo.jpeg" alt="logo" />
                     </div>
 
-                    <div className='col-md-6 about-courses'>
+                    <div className='col-md-6 about-courses wow fadeInUp'>
                         <div className='box'>
                             <CiClock2 size={90} className='box-icon' />
                             <div className='box-caption'>

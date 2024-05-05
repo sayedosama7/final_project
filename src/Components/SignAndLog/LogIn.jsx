@@ -8,7 +8,7 @@ const LogIn = () => {
     return (
         <div>
             <Navbar />
-            <div className="container">
+            <div className="container login">
                 <div className="row">
 
                     <div className="col-md-6 sign-up text-center">

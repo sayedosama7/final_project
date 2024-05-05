@@ -85,7 +85,7 @@ const Courses = () => {
     return (
         <div>
             <Navbar />
-            <div className="container">
+            <div className="container all-courses">
                 <div className="row">
                     {/* head Banar  */}
                     <div className='d-flex justify-content-between my-5 title-all'>
@@ -132,7 +132,6 @@ const Courses = () => {
                     ))}
                     {/* End Course Card */}
 
-                    <Footer />
                 </div>
             </div>
             <ScrollToTop smooth

@@ -9,7 +9,7 @@ function CourseDetails() {
   return (
     <div>
       <Navbar />
-      <div className="container my-5">
+      <div className="container course-details mb-5">
         <div className="row">
 
           {/* start head title  */}
@@ -123,11 +123,9 @@ function CourseDetails() {
           </div>
           {/* End table  */}
 
-          <div>
-            <Link to="/signup" className="btn btn-primary p-3">
-              enroll now
-            </Link>
-          </div>
+          <div class="btn-glow mt-2">
+                  <div class="btn"><Link to="#">enroll now</Link></div>
+                </div>
           {/* End details  */}
 
         </div>

@@ -90,7 +90,7 @@ const Instructors = () => {
   return (
     <div>
       <Navbar />
-      <div className="container my-5">
+      <div className="container instrctors-page">
         <div className="row">
 
           <div className='d-flex justify-content-between mb-5 title-all'>
@@ -116,12 +116,12 @@ const Instructors = () => {
                     <img className='img-fluid rounded-circle' src={instructor.img} alt="instructors" />
                   </div>
 
-                  <div className='col-md-12 col-lg-6'>
+                  <div className='col-md-12 col-lg-7'>
                     <div className='instructors-caption'>
-                      <h4 className='text-primary'>{instructor.name}</h4>
+                      <h6 className='text-primary'>{instructor.name}</h6>
                       <p className='text-muted'>{instructor.description}</p>
-                      <div className='d-flex justify-content-between align-items-center instrctors-right'>
-                        <h5 className='text-primary'>{instructor.job_title}</h5>
+                      <div className='d-flex flex-column instrctors-right'>
+                        <h6 className='text-primary instructors-icons'>{instructor.job_title}</h6>
                         {/* instructors-icons */}
                         <div className='instructors-icons'>
                           <a href={instructor.facebook} target='_blank' rel="noreferrer"><i className='fab fa-facebook text-primary p-2'></i></a>

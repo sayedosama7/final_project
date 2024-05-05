@@ -6,7 +6,7 @@ const ForgetPass = () => {
         <div>
             <Navbar />
             <div>
-                <div className="container">
+                <div className="container forget-pass">
                     <div className="row">
 
                         <div className="col-md-6 sign-up text-center p-5">
