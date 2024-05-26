@@ -8,7 +8,7 @@ function Features() {
                 <Row>
 
                     <Col md="6" lg="3">
-                        <div data-wow-delay="0.2s" className='box wow bounceInUp'>
+                        <div data-wow-delay="0.2s" className='box  wow fadeInUp'>
                             <i className="fa-solid fa-gear icon"></i>
                             <div className='text'>
                                 <h2>Lifetime Access</h2>
@@ -18,7 +18,7 @@ function Features() {
                     </Col>
 
                     <Col md="6" lg="3">
-                        <div data-wow-delay="0.4s" className='box wow bounceInUp'>
+                        <div data-wow-delay="0.4s" className='box  wow fadeInUp'>
                             <i className="fa-solid fa-check icon"></i>
                             <div className='text'>
                                 <h2>Best Teachers</h2>
@@ -28,7 +28,7 @@ function Features() {
                     </Col>
 
                     <Col md="6" lg="3">
-                        <div data-wow-delay="0.6s" className='box wow bounceInUp'>
+                        <div data-wow-delay="0.6s" className='box  wow fadeInUp'>
                             <i className="fa-solid fa-chalkboard-user icon"></i>
                             <div className='text'>
                                 <h2>Save money</h2>
@@ -38,7 +38,7 @@ function Features() {
                     </Col>
 
                     <Col md="6" lg="3">
-                        <div data-wow-delay="0.8s" className='box wow bounceInUp'>
+                        <div data-wow-delay="0.8s" className='box  wow fadeInUp'>
                             <i className="fa-solid fa-headset icon"></i>
                             <div className='text'>
                                 <h2>Interactive Support</h2>

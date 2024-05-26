@@ -1,13 +1,84 @@
-import React from 'react'
+/* eslint-disable no-unused-vars */
+import React, { useEffect, useState } from 'react'
 import Navbar from '../Navigation/NavBar'
 import { IoLocationOutline } from "react-icons/io5";
 import { CiPhone } from "react-icons/ci";
 import { CiMail } from "react-icons/ci";
 import Footer from '../Navigation/Footer';
 import ScrollToTop from 'react-scroll-to-top';
-import { Link } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import Swal from 'sweetalert2';
 
 const Contact = () => {
+    const navigate = useNavigate();
+    const [errors, setErrors] = useState({});
+    const [formData, setFormData] = useState({
+        full_name: '',
+        email: '',
+        phone: '',
+        message: '',
+    });
+
+    const Toast = Swal.mixin({
+        toast: true,
+        position: "top",
+        showConfirmButton: false,
+        timer: 3000,
+        iconColor: "#342871",
+        color: "#342871",
+        background: "#fff",
+        padding: "10px",
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.onmouseenter = Swal.stopTimer;
+            toast.onmouseleave = Swal.resumeTimer;
+        }
+    });
+
+    const { pathname } = useLocation();
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+        setErrors({ ...errors, [name]: '' });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        //validation
+        const newErrors = {};
+        if (!formData.full_name) newErrors.full_name = 'Please enter your name.';
+        if (!formData.email) newErrors.email = 'Please enter your email.';
+        else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Please enter a valid email.';
+        if (!formData.phone) newErrors.phone = 'Please enter your phone.';
+        if (!formData.message) newErrors.message = 'Please enter your message.';
+        if (Object.keys(newErrors).length > 0) {
+            setErrors(newErrors);
+            return;
+        }
+
+        try {
+            const response = await axios.post('http://127.0.0.1:8000/api/create_contact', formData, {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            const { data } = response;
+            navigate('/', { replace: true });
+            Toast.fire({
+                icon: "success",
+                title: "Thank You For Contacting Us"
+            });
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
+
+
     return (
         <div>
             <Navbar />
@@ -29,33 +100,37 @@ const Contact = () => {
 
                     {/* start form */}
                     <div className="col-md-12 col-lg-6 px-2">
-                        <form action="" className='pt-4 mt-5'>
+                        <form action="" className='pt-4 mt-5' onSubmit={handleSubmit} autoComplete="on">
 
-                            <div className="form-group wow fadeInUp">
-                                <label className='text-primary fw-bold'>first name</label>
-                                <input className='form-control' type="text" name="firstname" />
-                            </div>
-
-
-                            <div className="form-group wow fadeInUp">
-                                <label className='text-primary fw-bold'>last name</label>
-                                <input className='form-control' type="text" name="lastname" />
+                            <div className="form-group animate__animated animate__zoomInDown position-relative">
+                                <label htmlFor='full_name' className="text-primary fw-bold">Full Name *</label>
+                                <input id='full_name' type="text" name='full_name' value={formData.full_name} onChange={handleInputChange} className="form-control" placeholder="Your name" autoComplete="name" />
+                                {errors.full_name && <h6 className="error-log">{errors.full_name}</h6>}
                             </div>
 
                             <div className="form-group wow fadeInUp">
-                                <label className='text-primary fw-bold'>email</label>
-                                <input className='form-control' type="email" name="email" />
+                                <label htmlFor='email' className='text-primary fw-bold'>Email</label>
+                                <input id='email' className='form-control' onChange={handleInputChange} value={formData.email} type="email" name="email" autoComplete="email" />
+                                {errors.email && <h6 className="error-log">{errors.email}</h6>}
                             </div>
 
                             <div className="form-group wow fadeInUp">
-                                <label className='text-primary fw-bold'>message</label>
-                                <textarea className='form-control p-5' name="message"></textarea>
+                                <label htmlFor='phone' className='text-primary fw-bold'>Phone</label>
+                                <input id='phone' className='form-control' onChange={handleInputChange} value={formData.phone} type="tel" name="phone" autoComplete="tel" />
+                                {errors.phone && <h6 className="error-log">{errors.phone}</h6>}
                             </div>
-                            {/* <input className='btn btn-primary' type="submit" value="send" /> */}
-                            <div class="btn-glow mt-4 wow fadeInUp">
-                                <div class="btn"><Link to="#">send</Link></div>
+
+                            <div className="form-group wow fadeInUp">
+                                <label htmlFor='message' className='text-primary fw-bold'>Message</label>
+                                <textarea id='message' className='form-control p-5' onChange={handleInputChange} value={formData.message} name="message" autoComplete="off"></textarea>
+                                {errors.message && <h6 className="error-log">{errors.message}</h6>}
+                            </div>
+
+                            <div className="btn-glow mt-4 wow fadeInUp">
+                                <input className="btn-submit" type="submit" value="Send Message" />
                             </div>
                         </form>
+
                     </div>
                     {/* End form */}
 

@@ -12,43 +12,64 @@ import Profile from "./Components/SignAndLog/Profile";
 import ForgetPass from "./Components/SignAndLog/ForgetPass";
 import Events from "./Components/Pages/Events";
 import CourseDetails from "./Components/Pages/CourseDetails";
-
+import InstructorForm from "./Components/Pages/InstructorForm";
+import Assignments from "./Components/Pages/Assignments";
 
 const router = createBrowserRouter([
     {
-        path: "/", element: <App />
+        path: "/",
+        element: <App />
     },
     {
-        path: "/courses", element: <Courses />
+        path: "/courses",
+        element: <Courses />
     },
     {
-        path: "/coursesDetails", element: <CourseDetails />
+        path: "/coursesDetails",
+        element: <CourseDetails />
     },
     {
-        path: "/instructors", element: <Instructors />
+        path: "/instructors",
+        element: <Instructors />
     },
     {
-        path: "/Contact", element: <Contact />
+        path: "/Contact",
+        element: <Contact />
     },
     {
-        path: "/about", element: <About />
+        path: "/about",
+        element: <About />
     },
     {
-        path: "/signup", element: <SignUp />
+        path: "/signup",
+        element: <SignUp />
     },
     {
-        path: "/login", element: <LogIn />
+        path: "/login",
+        element: <LogIn />
     },
     {
-        path: "/profile", element: <Profile />
+        path: "/profile",
+        element: <Profile />
     },
     {
-        path: "/forget", element: <ForgetPass />
+        path: "/forget",
+        element: <ForgetPass />
     },
     {
-        path: "/events", element: <Events />
-    },
-
+        path: "/events",
+        element: <Events />
+    }
+    ,
+    {
+        path: "/instructor-form",
+        element: <InstructorForm />
+    }
+    ,
+    {
+        path: "/assignments",
+        element: <Assignments />
+    }
 ]);
 
 createRoot(document.getElementById("root")).render(

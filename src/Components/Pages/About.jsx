@@ -1,13 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../Navigation/NavBar'
 import { CiClock2 } from "react-icons/ci";
 import { FaWifi } from "react-icons/fa";
 import { GiStarFormation } from "react-icons/gi";
 import ScrollToTop from 'react-scroll-to-top';
 import Footer from '../Navigation/Footer';
+import { useLocation } from 'react-router';
 
 
 const About = () => {
+    const { pathname } = useLocation();
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
     return (
         <div>
             <Navbar />

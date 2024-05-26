@@ -6,7 +6,7 @@ function MiniDashboard() {
         <div className='mini-dashboard my-4'>
             <Container>
                 <Row>
-                    <Col md="6" lg='3' className='wow fadeInUpBig' data-wow-delay="0.1s">
+                    <Col md="6" lg='3' className='wow fadeInUp' data-wow-delay="0.1s">
                         <div className='box'>
                             <i className="fa-solid fa-users-between-lines icon"></i>
                             <div className='text'>
@@ -15,7 +15,7 @@ function MiniDashboard() {
                             </div>
                         </div>
                     </Col>
-                    <Col md="6" lg='3' className='wow fadeInUpBig' data-wow-delay="0.3s">
+                    <Col md="6" lg='3' className='wow fadeInUp' data-wow-delay="0.3s">
                         <div className='box'>
                             <i className="fa-solid fa-person-chalkboard icon"></i>
                             <div className='text'>
@@ -24,7 +24,7 @@ function MiniDashboard() {
                             </div>
                         </div>
                     </Col>
-                    <Col md="6" lg='3' className='wow fadeInUpBig' data-wow-delay="0.5s">
+                    <Col md="6" lg='3' className='wow fadeInUp' data-wow-delay="0.5s">
                         <div className='box'>
                             <i className="fa-solid fa-graduation-cap icon"></i>
                             <div className='text'>
@@ -33,7 +33,7 @@ function MiniDashboard() {
                             </div>
                         </div>
                     </Col>
-                    <Col md="6" lg='3' className='wow fadeInUpBig' data-wow-delay="0.7s">
+                    <Col md="6" lg='3' className='wow fadeInUp' data-wow-delay="0.7s">
                         <div className='box'>
                             <i className="fa-solid fa-certificate icon"></i>
                             <div className='text'>

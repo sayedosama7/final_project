@@ -8,17 +8,22 @@ import BecomeInstructor from './BecomeInstructor'
 import CourseCategory from './CourseCategory'
 import Footer from '../Navigation/Footer'
 import Discount from './Discount'
+import SmokeLogo from './SmokeLogo'
+import Blog from './Blog'
 
 function Allhomepage() {
+
   return (
     <div>
       <Banner />
-      <Features />
+      <Blog/>
       <CourseCategory />
       <InstructorHome />
-      <MiniDashboard />
-      <Discount />
+      {/* <MiniDashboard /> */}
       <BecomeInstructor />
+      <Features />
+      <Discount />
+      <SmokeLogo/>
       <Footer />
       <ScrollToTop smooth
         color='#fff'

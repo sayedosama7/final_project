@@ -1,14 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import Home from './Components/Home'
 import { ScaleLoader } from 'react-spinners';
+import { useLocation } from 'react-router';
 
 const App = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   const [loading, setLoading] = useState([false]);
   useEffect(() => {
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
-    }, 2000)
+    }, 30)
   }, [])
   return (
     <div>

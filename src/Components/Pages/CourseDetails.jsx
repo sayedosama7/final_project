@@ -1,11 +1,15 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../Navigation/NavBar'
 import Footer from '../Navigation/Footer'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import ScrollToTop from 'react-scroll-to-top'
 
 function CourseDetails() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
     <div>
       <Navbar />
@@ -75,7 +79,7 @@ function CourseDetails() {
 
           {/* start table  */}
           <div>
-            <table class="table table-responsive bg-light table-borderless">
+            <table className="table table-responsive bg-light table-borderless">
               <thead>
                 <tr className="text-primary">
                   <th scope="col ">Category</th>
@@ -123,8 +127,8 @@ function CourseDetails() {
           </div>
           {/* End table  */}
 
-          <div class="btn-glow mt-2">
-                  <div class="btn"><Link to="#">enroll now</Link></div>
+          <div className="btn-glow mt-2">
+                  <div className="btn"><Link to="#">enroll now</Link></div>
                 </div>
           {/* End details  */}
 

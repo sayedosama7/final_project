@@ -3,6 +3,7 @@ import NavBar from './Navigation/NavBar'
 import Allhomepage from './Homepage/Allhomepage'
 
 const Home = () => {
+
   return (
     <div>
       <NavBar/>

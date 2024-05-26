@@ -196,8 +196,24 @@ li {
     display: block;
 }
 
-.uo-hidden {
-    display: none;
+/* .fa-angle-down {
+    color: var(--bg-color);
+}
+
+.fa-angle-down:hover {
+    color: black;
+} */
+
+.dropdown-menu {
+    min-width: 0px !important;
+    top: 35px !important;
+}
+
+.dropdown-item:hover {
+    background-color: var(--bg-color) !important;
+    color: var(--main-color) !important;
+    border-radius: 0px !important;
+    transition: var(--transition) !important;
 }
 
 @media (max-width: 992px) {
@@ -206,12 +222,8 @@ li {
         align-items: start;
     }
 
-    .uo-hidden {
-        display: flex;
-    }
-
-    .uo-show {
-        display: none;
+    .logout {
+        margin-top: 0 !important;
     }
 
     .navbar-links a,
@@ -229,20 +241,27 @@ li {
         color: var(--bg-color);
     }
 
-    .dropdown-content a:hover {
-        background-color: #2d179e;
+    .dropdown-content a:hover,
+    .dropdown-item:hover {
+        background-color: #fff !important;
+        color: #000 !important;
+    }
+
+    .dropdown-item:hover {
+        border-radius: 9px !important;
+        transition: none !important;
     }
 
     .signup {
-        outline: 1px solid var(--main-color);
-        color: #fff;
-        padding: 5px !important;
+        color: var(--main-color) !important;
         margin-bottom: 15px !important;
+        border-radius: 5px;
     }
 
     .signup:hover {
-        background-color: var(--main-color);
+        transition: var(--transition);
         color: var(--bg-color) !important;
+        background-color: var(--main-color);
     }
 
     .navbar-links {
@@ -279,6 +298,14 @@ li {
         color: var(--main-color);
     }
 
+    .dropdown-menu {
+        top: 35px !important;
+        min-width: 0px !important;
+    }
+
+    .dropdown-item {
+        color: var(--bg-color) !important;
+    }
 }
 
 /* End navbar  */
@@ -491,10 +518,10 @@ li {
 .instructors-icons .fa-instagram:hover,
 .instructors-icons .fa-twitter:hover,
 .instructors-icons .fa-linkedin:hover {
-    color: #fff !important;
-    background-color: #372B73;
     border-radius: 50%;
     transition: all .5s ease;
+    color: var(--main-color) !important;
+    background-color: var(--bg-color) !important;
 }
 
 @keyframes up-and-down {
@@ -830,9 +857,12 @@ li {
 
 .signup-form input[type="text"],
 .signup-form input[type="email"],
-.signup-form input[type="password"] {
+.signup-form input[type="password"],
+.signup-form input[type="tel"],
+.signup-form input[type="file"] {
     padding: 25px 40px !important;
-    color: var(--hover-color) !important;
+    color: var(--bg-color) !important;
+    font-weight: 600;
     border-radius: 10px !important;
     border: none !important;
     background-color: #F5F7F9;
@@ -852,8 +882,9 @@ li {
 
 .signup-form input[type="submit"]:hover,
 .signup-with-facebook:hover {
-    background-color: #2d179e !important;
-    color: #fff !important;
+    background-color: var(--hover-color) !important;
+    color: #000 !important;
+    font-weight: 600;
 }
 
 .signup-with {
@@ -862,8 +893,8 @@ li {
 }
 
 .signup-with:hover {
-    color: #fff !important;
-    background-color: var(--bg-color) !important;
+    color: #000 !important;
+    background-color: var(--hover-color) !important;
 
 }
 
@@ -885,6 +916,14 @@ hr {
     background-color: var(--bg-color);
     color: var(--main-color);
     padding: 7px;
+}
+
+.error-log {
+    color: red;
+    margin-top: 5px;
+    transition: all 10s ease;
+    font-weight: 400;
+    text-transform: none;
 }
 
 @media (max-width:576px) {
@@ -1031,7 +1070,9 @@ hr {
 }
 
 .instructor-home .images {
-    background-color: var(--hover-color);
+    background-image: url('../images/Home/background.jpg') !important;
+    background-size: cover;
+    background-position: center;
     padding: 80px 0 50px 50px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -1060,6 +1101,13 @@ hr {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.join-contain {
+    background-image: url('../images/Home/background.jpg') !important;
+    background-size: cover;
+    background-position: center;
+
 }
 
 .swiper-pagination-fraction,
@@ -1170,9 +1218,18 @@ hr {
     padding-top: 90px !important;
 }
 
+.all-courses .box .logo {
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+}
+
 .course-category {
     background-color: var(--hover-color);
     padding: 100px;
+    background-image: url('../images/Home/background.jpg');
+    background-size: cover;
 }
 
 .course-box p {
@@ -1208,6 +1265,12 @@ hr {
     border-radius: 5px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
+}
+
+@media(max-width:992px) {
+    .all-courses .box {
+        flex-direction: column !important;
+    }
 }
 
 @media(max-width:576px) {
@@ -1520,9 +1583,10 @@ hr {
 /* start footer */
 
 .footer {
-    background-color: var(--bg-color);
+    background-image: url('../images/Home/background.jpg');
+    background-size: cover;
     padding: 10px;
-    color: #fff !important;
+    color: var(--bg-color) !important;
     margin: auto;
 }
 
@@ -1532,15 +1596,14 @@ hr {
 .footer .social-icons .fa-linkedin {
     font-size: 30px;
     padding: 10px;
-    color: var(--main-color) !important;
 }
 
 .footer .social-icons .fa-facebook:hover,
-.fa-twitter:hover,
-.fa-instagram:hover,
-.fa-linkedin:hover {
+.footer .fa-twitter:hover,
+.footer .fa-instagram:hover,
+.footer .fa-linkedin:hover {
     color: var(--main-color) !important;
-    background-color: var(--hover-color) !important;
+    background-color: var(--bg-color) !important;
     border-radius: 50%;
     transition: var(--transition);
 }
@@ -1553,7 +1616,7 @@ hr {
 
 .footer .phone {
     text-decoration: none;
-    color: var(--main-color);
+    color: var(--bg-color);
 }
 
 @media(max-width:768px) {
@@ -1563,6 +1626,49 @@ hr {
 }
 
 /* End footer */
+
+/* start smoke section  */
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 35vh;
+    opacity: 0.4;
+}
+
+.smoke {
+    position: relative;
+    background: var(--bg-color);
+    overflow: hidden;
+}
+
+.smoke h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    color: #f5f5f5;
+    font-size: 5em;
+    font-family: sans-serif;
+}
+
+.smoke h1 span {
+    display: inline-block;
+}
+
+/* End smoke section  */
+
+
+.sayed {
+    direction: rtl;
+    font-size: 13px;
+}
+
+
+
 
 
 
