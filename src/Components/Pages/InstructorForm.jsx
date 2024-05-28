@@ -112,8 +112,8 @@ const SignUp = () => {
                     </div>
 
                     <div className="col-md-6 m-auto animate__animated animate__zoomInDown signup-inputs p-5">
-                        <h2 className="text-primary fw-bold">Sign up for your <br />account!</h2>
-                        <h6 className='fw-bold'>Nice to see you! Please sign up with your account.</h6>
+                        <h2 className="text-primary fw-bold">join our  <br />team</h2>
+                        <h6 className='fw-bold'>Nice to see you! please fill out these fields.</h6>
 
                         <form className='mt-4 signup-form' onSubmit={handleSubmit} autoComplete='on' encType="multipart/form-data">
                             <div className="form-group animate__animated animate__zoomInDown position-relative">

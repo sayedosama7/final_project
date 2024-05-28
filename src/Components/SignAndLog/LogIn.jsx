@@ -84,6 +84,10 @@ const LogIn = () => {
             const token = response.data.token;
             localStorage.setItem('token', token);
             localStorage.setItem('role', user.role);
+            localStorage.setItem('username', user.username);
+            localStorage.setItem('userEmail', user.email);
+            localStorage.setItem('userCity', user.city);
+            localStorage.setItem('userPhone', user.phone);
 
             navigate('/', { replace: true });
             Toast.fire({

@@ -1,15 +1,35 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../Navigation/NavBar'
 import Footer from '../Navigation/Footer'
 import { Link, useLocation } from 'react-router-dom'
 import ScrollToTop from 'react-scroll-to-top'
+import axios from 'axios'
 
 function CourseDetails() {
   const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await axios.get('http://127.0.0.1:8000/api/allusers');
+        console.log(response);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+      const token = localStorage.getItem('token');
+      if (token) {
+        setIsLoggedIn(true);
+      }
+    }
+    fetchData();
+  }, []);
+
   return (
     <div>
       <Navbar />
@@ -17,18 +37,18 @@ function CourseDetails() {
         <div className="row">
 
           {/* start head title  */}
-          <div className='d-flex justify-content-between mb-5 title-all'>
-
-            <div className='m-auto position-relative'>
-              <img className='img-fluid tag' src="/images/instructors/tag-2.png" alt="" />
-              <h2 className='main-title text-primary mb-2 wow fadeInLeft' data-wow-delay=".3s">course details</h2>
-              <p className='text-muted fw-bold mb-5 wow fadeInUp' data-wow-delay=".4s" data-wow-duration="3s">
-                Our role here has increased more and this is so that we can benefit the students who are with us in our courses.
-              </p>
-            </div>
-
-            <img className='img-fluid wow fadeInDown' data-wow-delay=".3s" src="/images/instructors/instructors-banner.png" alt="" />
+          <div className='m-auto position-relative col-md-6'>
+            <img className='img-fluid tag' src="/images/instructors/tag-2.png" alt="" />
+            <h2 className='main-title text-primary mb-2 wow fadeInLeft' data-wow-delay=".3s">course details</h2>
+            <p className='text-muted fw-bold mb-5 wow fadeInUp' data-wow-delay=".4s" data-wow-duration="3s">
+              Our role here has increased more and this is so that we can benefit the students who are with us in our courses.
+            </p>
           </div>
+
+          <div className='col-md-6 text-center'>
+            <img className='img-fluid wow fadeInDown hat mb-5' data-wow-delay=".3s" src="/images/instructors/instructors-banner.png" alt="title-all" />
+          </div>
+
           {/* End head title  */}
 
           {/* start details  */}
@@ -126,19 +146,19 @@ function CourseDetails() {
             </table>
           </div>
           {/* End table  */}
-
-          <div className="btn-glow mt-2">
-                  <div className="btn"><Link to="#">enroll now</Link></div>
-                </div>
+          {!isLoggedIn && (
+            <div className="btn-glow mt-2">
+              <div className="btn"><Link to="/signup">enroll now</Link></div>
+            </div>)}
           {/* End details  */}
 
         </div>
       </div>
       <ScrollToTop smooth
-                color='#fff'
-                style={{ backgroundColor: '#372B73' }}
-                className='animate__animated animate__flash animate__infinite	infinite animate__slower'
-            />
+        color='#fff'
+        style={{ backgroundColor: '#372B73' }}
+        className='animate__animated animate__flash animate__infinite	infinite animate__slower'
+      />
       <Footer />
     </div>
   )

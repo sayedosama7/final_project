@@ -29,98 +29,23 @@ const Courses = () => {
         fetchData();
     }, []);
 
-    // const courses = [
-    //     {
-    //         "id": "1",
-    //         "name": 'web development',
-    //         "img": "/images/Courses/course-1.jpg",
-    //         "description": "Some Quick Example Text To Build On The Card Title And Make Up",
-    //         "video": "40",
-    //         "hours": "150",
-    //         "link": "/coursesDetails",
-    //     },
-    //     {
-    //         "id": "2",
-    //         "name": 'mobile development',
-    //         "img": "/images/Courses/mobile.jpg",
-    //         "description": "Some Quick Example Text To Build On The Card Title And Make Up",
-    //         "video": "30",
-    //         "hours": "100",
-    //         "link": "/coursesDetails",
-    //     },
-    //     {
-    //         "id": "3",
-    //         "name": 'graphics',
-    //         "img": "/images/Courses/graphics.jpeg",
-    //         "description": "Some Quick Example Text To Build On The Card Title And Make Up",
-    //         "video": "60",
-    //         "hours": "70",
-    //         "link": "/coursesDetails",
-    //     },
-    //     {
-    //         "id": "4",
-    //         "name": 'IT & Software',
-    //         "img": "/images/Courses/software.webp",
-    //         "description": "Some Quick Example Text To Build On The Card Title And Make Up",
-    //         "video": "50",
-    //         "hours": "100",
-    //         "link": "/coursesDetails",
-    //     },
-    //     {
-    //         "id": "5",
-    //         "name": 'Data Science',
-    //         "img": "/images/Courses/course-1.jpg",
-    //         "description": "Some Quick Example Text To Build On The Card Title And Make Up",
-    //         "video": "40",
-    //         "hours": "120",
-    //         "link": "/coursesDetails",
-    //     },
-    //     {
-    //         "id": "6",
-    //         "name": 'Artificial Intelligence',
-    //         "img": "/images/Courses/ai.jpeg",
-    //         "description": "Some Quick Example Text To Build On The Card Title And Make Up",
-    //         "video": "45",
-    //         "hours": "5",
-    //         "link": "/coursesDetails",
-    //     },
-    //     {
-    //         "id": "7",
-    //         "name": 'Photoshop Course',
-    //         "img": "/images/Courses/photoshop.webp",
-    //         "description": "Some Quick Example Text To Build On The Card Title And Make Up",
-    //         "video": "30",
-    //         "hours": "100",
-    //         "link": "/coursesDetails",
-    //     },
-    //     {
-    //         "id": "8",
-    //         "name": 'Illustrator Course',
-    //         "img": "/images/Courses/course-1.jpg",
-    //         "description": "Some Quick Example Text To Build On The Card Title And Make Up",
-    //         "video": "20",
-    //         "hours": "70",
-    //         "link": "/coursesDetails",
-    //     },
-
-    // ];
     return (
         <div>
             <Navbar />
             <div className="container all-courses">
                 <div className="row">
+
                     {/* head Banar  */}
-                    <div className='d-flex justify-content-between my-5 title-all'>
+                    <div className='m-auto position-relative col-md-6'>
+                        <img className='img-fluid tag' src="/images/instructors/tag-2.png" alt="" />
+                        <h2 className='main-title text-primary mb-2 wow fadeInLeft' data-wow-delay=".3s">Our courses</h2>
+                        <p className='text-muted fw-bold mb-5 wow fadeInUp' data-wow-delay=".4s" data-wow-duration="3s">
+                            Our role here has increased more and this is so that we can benefit the students who are with us in our courses.
+                        </p>
+                    </div>
 
-                        <div className='m-auto position-relative'>
-                            <img className='img-fluid tag' src="/images/instructors/tag-2.png" alt="" />
-                            <h2 className='main-title text-primary mb-2 wow fadeInLeft' data-wow-delay=".3s">Our courses</h2>
-                            <p className='text-muted fw-bold mb-5 wow fadeInUp' data-wow-delay=".4s" data-wow-duration="3s">
-                                Our role here has increased more and this is so that we can benefit the students who are with us in our courses.
-                            </p>
-                        </div>
-
-                        <img className='img-fluid wow fadeInDown' data-wow-delay=".3s" src="/images/instructors/instructors-banner.png" alt="" />
+                    <div className='col-md-6 text-center'>
+                        <img className='img-fluid wow fadeInDown hat mb-5' data-wow-delay=".3s" src="/images/instructors/instructors-banner.png" alt="title-all" />
                     </div>
 
                     {/* start Course Card */}
@@ -142,7 +67,7 @@ const Courses = () => {
                                         {/* <h5 className='text-primary'>instructor name</h5>
                                         <p className="text-muted">{data.instructor_name}ahmed hatem</p> */}
                                         <div className="d-flex justify-content-start align-items-center">
-                                            <Link to={data.link} className="text-primary fw-bold text-decoration-none mr-2">read more</Link>
+                                            <Link to='/coursesDetails' className="text-primary fw-bold text-decoration-none mr-2">read more</Link>
                                             <i className="fas fa-arrow-left text-primary fw-bold animate__animated animate__headShake animate__infinite"></i>
                                         </div>
                                     </div>

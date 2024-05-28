@@ -82,7 +82,7 @@ li {
     width: 100%;
     position: fixed;
     z-index: 999 !important;
-    background-color: var(--main-color) !important;
+    background-color: var(--bg-color) !important;
 }
 
 .navbar-logo img {
@@ -96,15 +96,29 @@ li {
 }
 
 .navbar-links a {
-    color: var(--bg-color);
+    color: var(--main-color);
     text-decoration: none;
     margin-right: 1rem;
     font-weight: 600 !important;
     font-size: 16px;
 }
 
+.navbar-links li a.active {
+    position: relative;
+}
+
+.navbar-links li a.active::after {
+    position: absolute;
+    content: '';
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+}
+
 .navbar-links :hover {
-    color: #000;
+    /* color: #000; */
 }
 
 .user-options {
@@ -125,12 +139,12 @@ li {
 .navbar-toggle {
     display: none;
     cursor: pointer;
-    color: var(--bg-color);
+    color: var(--main-color);
 }
 
 .fauser {
     cursor: pointer !important;
-    color: var(--bg-color);
+    color: var(--main-color);
 }
 
 .signup {
@@ -138,7 +152,7 @@ li {
     /* border-radius: 5px;
     background-color: var(--bg-color);
     border: none; */
-    color: var(--bg-color) !important;
+    color: var(--main-color) !important;
     font-weight: 600;
     text-decoration: none !important;
     cursor: pointer;
@@ -147,9 +161,9 @@ li {
 }
 
 .signup:hover {
-    background-color: var(--bg-color);
-    color: var(--main-color) !important;
-    outline: 1px solid #372B73 !important;
+    background-color: var(--main-color);
+    color: var(--bg-color) !important;
+    /* outline: 1px solid #fff !important; */
     border-radius: 5px;
 
 }
@@ -306,6 +320,16 @@ li {
     .dropdown-item {
         color: var(--bg-color) !important;
     }
+
+    .navbar-links li a.active::after {
+        position: absolute;
+        content: '';
+        bottom: 7px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+    }
 }
 
 /* End navbar  */
@@ -405,7 +429,9 @@ li {
 /* End about  */
 
 /* start contact us  */
-.contact-us {
+.contact-us,
+.events,
+.assignments {
     padding-top: 100px !important;
     margin-bottom: 30px;
 }
@@ -479,6 +505,10 @@ li {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.154);
 }
 
+.hat {
+    width: 75%;
+}
+
 .tag {
     position: absolute;
     left: 0;
@@ -537,10 +567,6 @@ li {
 }
 
 @media(max-width:992px) {
-    .title-all {
-        flex-direction: column;
-    }
-
     .instrctors-left {
         flex-direction: column;
     }
@@ -926,11 +952,16 @@ hr {
     text-transform: none;
 }
 
+
 @media (max-width:576px) {
 
     .sign-up,
     .signup-inputs {
         padding: 20px !important;
+    }
+
+    .signup {
+        margin-top: 0 !important;
     }
 }
 
@@ -1660,7 +1691,16 @@ video {
 }
 
 /* End smoke section  */
+.profile-info {
+    padding: 5px 10px;
+    border: 1px solid rgba(128, 128, 128, 0.466);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
 
+.profile-info-section {
+    padding-top: 15%;
+}
 
 .sayed {
     direction: rtl;

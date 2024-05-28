@@ -3,13 +3,14 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes, FaRegUser } from 'react-icons/fa';
 import { IoIosArrowDown } from 'react-icons/io';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [role, setRole] = useState(null);
     const navigate = useNavigate();
+    const location = useLocation();
 
     useEffect(() => {
         const fetchData = async () => {
@@ -48,26 +49,13 @@ const Navbar = () => {
                 </div>
 
                 <div className={`navbar-links ${isOpen ? 'open' : ''}`}>
-                    <li><Link to="/">Home</Link></li>
-                    <li className="dropdown fw-bold">
-                        <button className="dropbtn">Courses<IoIosArrowDown size={18} className='mt-1 IoIosArrowDown' />
-                        </button>
-                        <div className="dropdown-content">
-                            <Link to="/courses">All Courses</Link>
-                            <Link to="/coursesDetails">Web Development</Link>
-                            <Link to="/coursesDetails">Mobile Development</Link>
-                            <Link to="/coursesDetails">Graphics</Link>
-                            <Link to="/coursesDetails">IT & Software</Link>
-                            <Link to="/coursesDetails">Data Science</Link>
-                            <Link to="/coursesDetails">Artificial Intelligence</Link>
-                            <Link to="/coursesDetails">Photoshop Course</Link>
-                            <Link to="/coursesDetails">Illustrator Course</Link>
-                        </div>
-                    </li>
-                    <li className='mr-3'><Link to="/instructors" className='mr-0'>Instructors</Link></li>
-                    <li><Link to="/contact">Contact Us</Link></li>
-                    <li><Link to="/about">About Us</Link></li>
-                    {role === 'active' && <li><Link to="/assignments">assignments</Link></li>}
+                    <li><Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link></li>
+                    <li><Link to="/courses" className={location.pathname === '/courses' ? 'active' : ''}>Courses</Link></li>
+                    <li><Link to="/instructors" className={location.pathname === '/instructors' ? 'active' : ''}>Instructors</Link></li>
+                    <li><Link to="/events" className={location.pathname === '/events' ? 'active' : ''}>Events</Link></li>
+                    <li><Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>Contact Us</Link></li>
+                    <li><Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About Us</Link></li>
+                    {role === 'active' && <li><Link to="/assignments" className={location.pathname === '/assignments' ? 'active' : ''}>Assignments</Link></li>}
                     {isLoggedIn ? (
                         <div className="user-options">
                             <div className="dropdown">
@@ -81,8 +69,8 @@ const Navbar = () => {
                         </div>
                     ) : (
                         <div className="user-options">
-                            <Link to='/signup' className="signup px-2 py-1 mr-1 mb-2">Sign Up</Link>
-                            <Link to='/login' className="signup px-2 py-1 mb-2">Log In</Link>
+                            <Link to='/signup' className="signup px-2 py-1 mr-1 mb-2 mt-2">Sign Up</Link>
+                            <Link to='/login' className="signup px-2 py-1 mb-2  mt-2">Log In</Link>
                         </div>
                     )}
                 </div>
